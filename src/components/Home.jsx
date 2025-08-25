@@ -13,6 +13,7 @@ function Home() {
   const sponsorsRef = useRef();
   const sponRef = useRef();
   const cardRef = useRef();
+  const ctaRef = useRef()
 
   useGSAP(() => {
     const tl1 = gsap.timeline();
@@ -49,7 +50,7 @@ function Home() {
 
     const cardSelector = gsap.utils.selector(cardRef);
     gsap.from(cardSelector(".left"), {
-      x: -200,
+      x: -100,
       opacity: 0,
       duration: 1,
       stagger: 0.5,
@@ -57,11 +58,10 @@ function Home() {
       scrollTrigger: {
         trigger: cardRef.current,
         start: "top 85%",
-        markers: true
       }
     });
     gsap.from(cardSelector(".right"), {
-      x: 200,
+      x: 100,
       opacity: 0,
       duration: 1,
       stagger: 0.5,
@@ -69,9 +69,20 @@ function Home() {
       scrollTrigger: {
         trigger: cardRef.current,
         start: "top 85%",
-        markers: true
       }
     });
+
+
+    gsap.from(ctaRef.current, {
+      y: 100,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ctaRef.current,
+        start: "top 90%",
+      }
+    })
   });
 
   return (
@@ -153,7 +164,7 @@ function Home() {
         />
       </section>
 
-      <section className="container mx-auto flex justify-around items-center bg-light-gray rounded-3xl p-8">
+      <section ref={ctaRef} className="container mx-auto flex justify-around items-center bg-light-gray rounded-3xl p-8">
         <div className="max-w-3/5 flex flex-col gap-8">
           <h1 className="text-secondary font-secondary text-md">
             Let's make things happen
