@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'NeueMachina-Regular';
+  src: url("./assets/fonts/NeueMachina-Regular.otf"); 
+}
+@font-face {
+  font-family: 'NeueMachina-Bold';
+  src: url("./assets/fonts/NeueMachina-Ultrabold.otf"); 
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url("./assets/fonts/Helvetica.ttf"); 
+}
+@theme{
+  --color-primary: #FFFFFF;
+  --color-secondary: #1F1F1F;
+  --color-lime: #B9FF6B;
+  --color-gray: #27282F;
+  --color-light-gray: #F3F3F3;
+  --font-primary: 'NeueMachina-Regular', sans-serif;
+  --font-secondary: 'NeueMachina-Bold', sans-serif;
+  --font-subtitle: 'Helvetica', sans-serif;
+  --text-base: 1rem; /* 14px */
+  --text-md: 1.5rem; /* 18px */
+  --text-lg: 2rem; /* 20px */
+  --text-xl: 4rem; /* 56px */
+  --text-tiny: 0.9rem;
+}
+
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 87.5%;
+    /* 1rem = 14px */
+}
+
